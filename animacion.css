@@ -1,0 +1,118 @@
+/* Animación 1: Flotar */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Animación 2: Rotar */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Animación 3: Escalar */
+@keyframes scale {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Animación 4: Desplazarse horizontalmente */
+@keyframes slide {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-10px);
+    }
+}
+
+/* Aplicar animaciones a cada imagen */
+.new-container .features .feature:nth-child(1) img {
+    animation: float 3s ease-in-out infinite;
+}
+
+.new-container .features .feature:nth-child(2) img {
+    animation: rotate 4s linear infinite;
+}
+
+.new-container .features .feature:nth-child(3) img {
+    animation: scale 2s ease-in-out infinite;
+}
+
+.new-container .features .feature:nth-child(4) img {
+    animation: slide 3s ease-in-out infinite;
+}
+
+/* Animación para las imágenes del hero */
+.hero .image-gallery img:nth-child(1) {
+    animation: float 3s ease-in-out infinite;
+}
+
+.hero .image-gallery img:nth-child(2) {
+    animation: rotate 4s linear infinite;
+}
+
+.hero .image-gallery img:nth-child(3) {
+    animation: scale 2s ease-in-out infinite;
+}
+
+.hero .image-gallery img:nth-child(4) {
+    animation: slide 3s ease-in-out infinite;
+}
+
+.hero .image-gallery img:nth-child(5) {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Animación para las imágenes de la sección de características */
+.feature-list .feature:nth-child(1) img {
+    animation: rotate 4s linear infinite;
+}
+
+.feature-list .feature:nth-child(2) img {
+    animation: scale 2s ease-in-out infinite;
+}
+
+.feature-list .feature:nth-child(3) img {
+    animation: slide 3s ease-in-out infinite;
+}
+Efecto hover en los cuadros de características */
+.new-container .features .feature:hover {
+    background-color: #f0f0f0; /* Color plomito (gris claro) */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+/* Nuevo contenedor centrado */
+.centered-container {
+    display: flex;
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    gap: 40px;
+    padding: 50px 20px;
+    margin: 0 auto; /* Centrar el contenedor en la página */
+    max-width: 1200px; /* Limitar el ancho máximo */
+}
+
+.centered-container .video-container {
+    flex: 1;
+    max-width: 50%;
+}
+
+.centered-container .features {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 50%;
+}

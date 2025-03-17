@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affon - Conéctate en cualquier momento</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f0f4ff;
+        }
+        header {
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: auto;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo img {
+            height: 24px;
+            width: auto;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .btn {
+            background: #ffffff;
+            color: #ff9800;
+            border: 2px solid #ff9800;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .btn2 {
+            background: #ff9800;
+            color: #ffffff;
+            border: 2px solid #ff9800;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            display: block;
+            margin: 10px auto 0;
+        }
+        .btn3 {
+            background: #23cfff;
+            color: #ffffff;
+            border: 2px solid #23cfff;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            display: block;
+            margin: 10px auto 0;
+        }
+        .btn4 {
+            background: #3385FF;
+            color: #ffffff;
+            border: 2px solid #3385FF;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            display: block;
+            margin: 10px auto 0;
+        }
+        .hero {
+            background: #ffffff;
+            padding: 50px 20px;
+        }
+        .image-gallery, .feature-list {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .hero img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+        }
+        .feature, .feature-list .feature {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            text-align: center;
+            max-width: 300px;
+            background-color: #ffffff;
+        }
+        .testimonials {
+            background: #ff9800;
+            color: #fff;
+            padding: 50px 20px;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        /* Nuevo contenedor centrado */
+        .centered-container {
+            display: flex;
+            align-items: center; /* Centrar verticalmente */
+            justify-content: center; /* Centrar horizontalmente */
+            gap: 40px;
+            padding: 50px 20px;
+            margin: 0 auto; /* Centrar el contenedor en la página */
+            max-width: 1200px; /* Limitar el ancho máximo */
+        }
+        .centered-container .video-container {
+            flex: 1;
+            max-width: 50%;
+        }
+        .centered-container .features {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 50%;
+        }
+        .centered-container .feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        .centered-container .feature-icon {
+            width: 50px;
+            height: 50px;
+        }
+        .centered-container .feature span {
+            text-align: left;
+        }
+
+        /* Nuevo contenedor para texto e imagen */
+        .text-image-container {
+            display: flex;
+            align-items: center; /* Centrar verticalmente */
+            justify-content: center; /* Centrar horizontalmente */
+            gap: 40px; /* Espacio entre texto e imagen */
+            padding: 50px 20px;
+            margin: 0 auto; /* Centrar el contenedor en la página */
+            max-width: 1500px; /* Limitar el ancho máximo */
+            background-color: #FFFFFF; /* Fondo claro para distinguirlo */
+        }
+        .text-image-container .text-content {
+            flex: 1;
+            max-width: 50%; /* Ancho máximo del texto */
+            text-align: left; /* Alinear texto a la izquierda */
+        }
+        .text-image-container .image-content {
+            flex: 1;
+            max-width: 50%; /* Ancho máximo de la imagen */
+        }
+        .text-image-container .image-content img {
+            max-width: 100%; /* Asegurar que la imagen no se desborde */
+            height: auto;
+            border-radius: 10px; /* Bordes redondeados para la imagen */
+        }
+        /* Nuevo contenedor para texto e imagen */
+        .text-image-container1 {
+            display: flex;
+            align-items: center; /* Centrar verticalmente */
+            justify-content: center; /* Centrar horizontalmente */
+            gap: 40px; /* Espacio entre texto e imagen */
+            padding: 50px 20px;
+            margin: 50 auto; /* Centrar el contenedor en la página */
+            max-width: 1500px; /* Limitar el ancho máximo */
+            background-color: #1e276d; /* Fondo claro para distinguirlo */
+        }
+        .text-image-container1 .text-content {
+            flex: 1;
+            max-width: 50%; /* Ancho máximo del texto */
+            text-align: left; /* Alinear texto a la izquierda */
+        }
+        .text-image-container1 .image-content {
+            flex: 1;
+            max-width: 50%; /* Ancho máximo de la imagen */
+        }
+        .text-image-container1 .image-content img {
+            max-width: 100%; /* Asegurar que la imagen no se desborde */
+            height: auto;
+            border-radius: 10px; /* Bordes redondeados para la imagen */
+        }
+        /* Nuevo contenedor para texto e imagen */
+        .text-image-container2 {
+            display: flex;
+            align-items: center; /* Centrar verticalmente */
+            justify-content: center; /* Centrar horizontalmente */
+            gap: 40px; /* Espacio entre texto e imagen */
+            padding: 50px 20px;
+            margin: 0 auto; /* Centrar el contenedor en la página */
+            max-width: 1500px; /* Limitar el ancho máximo */
+            background-color: #ffffff; /* Fondo claro para distinguirlo */
+        }
+        .text-image-container2 .text-content {
+            flex: 1;
+            max-width: 50%; /* Ancho máximo del texto */
+            text-align: left; /* Alinear texto a la izquierda */
+        }
+        .text-image-container2 .image-content {
+            flex: 1;
+            max-width: 50%; /* Ancho máximo de la imagen */
+        }
+        .text-image-container2 .image-content img {
+            max-width: 100%; /* Asegurar que la imagen no se desborde */
+            height: auto;
+            border-radius: 10px; /* Bordes redondeados para la imagen */
+        }
+        .latest-news {
+            background-color: #ffffff;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        
+        .news-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .news-container h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .news-container p {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        
+        .news-cards {
+            display: flex;
+            justify-content: space-between; /* Distribuye los cards de manera uniforme */
+            gap: 20px; /* Espacio entre los cards */
+        }
+        
+        .news-card {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            width: calc(33.333% - 20px); /* Ancho de cada card, restando el espacio entre ellos */
+            aspect-ratio: 1 / 1; /* Hace que los cards sean cuadrados */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Distribuye el contenido dentro del card */
+        }
+        
+        .news-card h3 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .news-card p {
+            font-size: 1rem;
+            color: #666;
+      }
+
+.news-container p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.news-cards {
+    display: flex;
+    justify-content: space-between; /* Distribuye los cards de manera uniforme */
+    gap: 20px; /* Espacio entre los cards */
+}
+
+.news-card {
+    background-color: #f9f9f9;
+    padding: 0; /* Eliminamos el padding para que la imagen ocupe todo el espacio */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: calc(33.333% - 20px); /* Ancho de cada card, restando el espacio entre ellos */
+    aspect-ratio: 1 / 1; /* Hace que los cards sean cuadrados */
+    overflow: hidden; /* Asegura que la imagen no se desborde del card */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.news-card img {
+    width: 100%; /* La imagen ocupa todo el ancho del card */
+    height: 100%; /* La imagen ocupa todo el alto del card */
+    object-fit: cover; /* Ajusta la imagen para cubrir el espacio sin distorsionarse */
+    border-radius: 10px; /* Bordes redondeados para la imagen */
+}
+/* Selector de idioma */
+.language-selector {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.language-selector button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.language-selector button.active {
+    background: #ff9800;
+    color: #fff;
+}
+
+/* Ocultar elementos */
+.hidden {
+    display: none;
+}
+/* Estilos para la sección de Resources */
+.resources {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    text-align: left;
+}
+
+.resources-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.resources-column {
+    flex: 1;
+}
+
+.resources-column h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.resources-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.resources-column ul li {
+    margin-bottom: 10px;
+}
+
+.resources-column ul li a {
+    text-decoration: none;
+    color: #666;
+    font-size: 1rem;
+}
+
+.resources-column ul li a:hover {
+    color: #ff9800;
+}
+
+.resources-footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.resources-footer p {
+    font-size: 0.9rem;
+    color: #666;
+}
+/* Estilos para la sección de Affon y Resources */
+.affon-resources {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Columna de Affon */
+.affon-column {
+    flex: 1;
+    max-width: 40%;
+    padding-right: 40px;
+}
+
+.affon-logo h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.affon-text p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.affon-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.affon-icons span {
+    font-size: 1.5rem;
+    color: #666;
+    cursor: pointer;
+}
+
+.affon-icons span:hover {
+    color: #ff9800;
+}
+
+/* Columna de Resources */
+.resources-column {
+    flex: 1;
+    max-width: 20%;
+}
+
+.resources-column h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.resources-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.resources-column ul li {
+    margin-bottom: 10px;
+}
+
+.resources-column ul li a {
+    text-decoration: none;
+    color: #666;
+    font-size: 1rem;
+}
+
+.resources-column ul li a:hover {
+    color: #ff9800;
+}
+
+/* Pie de página */
+.resources-footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    background-color: #f9f9f9;
+    padding-bottom: 20px;
+}
+
+.resources-footer p {
+    font-size: 0.9rem;
+    color: #666;
+}
+.affon-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.affon-icons img {
+    width: 30px; /* Tamaño de las imágenes */
+    height: 30px; /* Tamaño de las imágenes */
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    background: transparent; /* Fondo transparente */
+}
+
+.affon-icons img:hover {
+    transform: scale(1.1); /* Efecto de escala al pasar el mouse */
+    opacity: 0.8; /* Efecto de opacidad al pasar el mouse */
+}
+.blue-background {
+    background-color: #3385FF; /* Color azul */
+    color: #ffffff; /* Color del texto en blanco para mejor contraste */
+    padding: 20px; /* Añadir un poco de padding para que el texto no esté pegado a los bordes */
+    border-radius: 10px; /* Bordes redondeados */
+}
+/* Animación de desvanecimiento (fade-in) */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animación de desplazamiento desde la izquierda */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Animación de desplazamiento desde la derecha */
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Animación de escalado (zoom-in) */
+@keyframes zoomIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Aplicar animaciones a los elementos */
+.hero, .features, .centered-container, .text-image-container, .text-image-container1, .text-image-container2, .latest-news, .affon-resources {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Animación para el header */
+header {
+    animation: slideInLeft 0.8s ease-in-out;
+}
+
+/* Animación para los botones */
+.btn, .btn2, .btn3, .btn4 {
+    animation: zoomIn 0.5s ease-in-out;
+}
+
+/* Animación para las tarjetas de noticias */
+.news-card {
+    animation: slideInRight 0.8s ease-in-out;
+}
+
+/* Animación para las imágenes */
+img {
+    animation: fadeIn 1s ease-in-out;
+}
+/* Animación personalizada para el logo */
+.logo {
+    animation: zoomIn 0.8s ease-in-out;
+}
+
+/* Animación personalizada para los íconos de Affon */
+.affon-icons img {
+    animation: fadeIn 1s ease-in-out, bounce 2s infinite;
+}
+
+/* Animación de rebote (bounce) */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+ /* Estilos base y animaciones */
+ body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f0f4ff;
+}
+header {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+    animation: slideInLeft 0.8s ease-in-out;
+}
+.hero, .features, .centered-container, .text-image-container, .text-image-container1, .text-image-container2, .latest-news, .affon-resources {
+    animation: fadeIn 1s ease-in-out;
+}
+.btn, .btn2, .btn3, .btn4 {
+    animation: zoomIn 0.5s ease-in-out;
+}
+.news-card {
+    animation: slideInRight 0.8s ease-in-out;
+}
+img {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Definición de animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes slideInLeft {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+@keyframes slideInRight {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+@keyframes zoomIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-20px); }
+    60% { transform: translateY(-10px); }
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+        /* Nuevas animaciones */
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        @keyframes slideUp {
+            from { transform: translateY(100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        /* Aplicar nuevas animaciones a elementos específicos */
+        .spin-animation {
+            animation: spin 2s linear infinite;
+        }
+        .slide-up-animation {
+            animation: slideUp 1s ease-in-out;
+        }
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+
+
+.spin-animation {
+    animation: spin 2s linear infinite;
+}
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.slide-up-animation {
+    animation: slideUp 1s ease-in-out;
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+.bounce-animation {
+    animation: bounce 2s infinite;
+}
+    </style>
+    <head>
+        <!-- Otros elementos del head -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    </head>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init(); // Inicializar AOS
+</script>
+</body>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="imagen.jpg" alt="Imagen 1" width="30" height="30">
+                <div class="logo">affon</div>
+            </div>
+            <ul>
+                <li><a href="#" data-lang="es">Inicio</a><a href="#" data-lang="en" class="hidden">Home</a></li>
+                <li><a href="#" data-lang="es">Acerca de</a><a href="#" data-lang="en" class="hidden">About</a></li>
+                <li><a href="#" data-lang="es">Equipos</a><a href="#" data-lang="en" class="hidden">Teams</a></li>
+                <li><a href="#" data-lang="es">Blog</a><a href="#" data-lang="en" class="hidden">Blog</a></li>
+                <li><a href="#" data-lang="es">Contacto</a><a href="#" data-lang="en" class="hidden">Contact</a></li>
+                <li><button class="btn" data-lang="es">Descargar ahora</button><button class="btn hidden" data-lang="en">Download Now</button></li>
+            </ul>
+            <div class="language-selector">
+                <button id="es-btn" class="active">ES</button>
+                <button id="en-btn">EN</button>
+            </div>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <h1 data-lang="es" class="slide-up-animation">Conéctese en cualquier lugar y en cualquier momento</h1>
+        <h1 data-lang="en" class="hidden slide-up-animation">Connect anywhere, anytime</h1>
+        <p data-lang="es">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+        <p data-lang="en" class="hidden">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+        <img src="imagen2.webp" alt="Videollamada" width="800" height="800" class="float-animation">
+        <button class="btn2 pulse-animation" data-lang="es">Descargar ahora</button>
+        <button class="btn2 hidden pulse-animation" data-lang="en">Download Now</button>
+        <h1 data-lang="es">Trusted by over 50,000 dropshippers worldwide</h1>
+        <h1 data-lang="en" class="hidden">Trusted by over 50,000 dropshippers worldwide</h1>
+        <div class="image-gallery">
+            <img src="imagen15.png" alt="Imagen 2" width="130" height="100" class="float-animation">
+            <img src="imagen16.png" alt="Imagen 3" width="130" height="100" class="float-animation">
+            <img src="imagen17.png" alt="Imagen 4" width="130" height="100" class="float-animation">
+            <img src="imagen15.png" alt="Imagen 4" width="130" height="100" class="float-animation">
+            <img src="imagen18.png" alt="Imagen 4" width="130" height="100" class="float-animation">
+        </div>
+    </section>
+    
+    <section class="features">
+        <h2 data-lang="es">Echa un vistazo a todas las características</h2>
+        <h2 data-lang="en" class="hidden">Check out all the features</h2>
+        <p data-lang="es">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet</p>
+        <p data-lang="en" class="hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet</p>
+        <p data-lang="es">Allí estará Asapien Gravida sed Nisl.</p>
+        <p data-lang="en" class="hidden">There will be Asapien Gravida sed Nisl.</p>
+        <div class="feature-list">
+            <div class="feature">
+                <img src="imagen19.png" alt="Imagen 1" width="130" height="50" class="pulse-animation">
+                <h3 data-lang="es">Llamadas de audio y video HD</h3>
+                <h3 data-lang="en" class="hidden">HD audio and video calls</h3>
+                <p data-lang="es">Lorem ipsum dolor sit amet. consectetur</p>
+                <p data-lang="en" class="hidden">Lorem ipsum dolor sit amet. consectetur</p>
+                <p data-lang="es">adipiscing elit. Aliquet sapien gravida sed</p>
+                <p data-lang="en" class="hidden">adipiscing elit. Aliquet sapien gravida sed</p>
+                <p data-lang="es">de todos modos, Nils es un poco así.</p>
+                <p data-lang="en" class="hidden">anyway, Nils is a bit like that.</p>
+            </div>
+            <div class="feature">
+                <img src="imagen20.png" alt="Imagen 1" width="130" height="50" class="pulse-animation">
+                <h3 data-lang="es">Compartir pantalla</h3>
+                <h3 data-lang="en" class="hidden">Screen sharing</h3>
+                <p data-lang="es">Lorem ipsum dolor sit amet. consectetur</p>
+                <p data-lang="en" class="hidden">Lorem ipsum dolor sit amet. consectetur</p>
+                <p data-lang="es">adipiscing elit. Aliquet sapien gravida sed</p>
+                <p data-lang="en" class="hidden">adipiscing elit. Aliquet sapien gravida sed</p>
+                <p data-lang="es">de todos modos, Nils es un poco así.</p>
+                <p data-lang="en" class="hidden">anyway, Nils is a bit like that.</p>
+            </div>
+            <div class="feature">
+                <img src="imagen21.png" alt="Imagen 1" width="130" height="50" class="pulse-animation">
+                <h3 data-lang="es">Mensajería inteligente</h3>
+                <h3 data-lang="en" class="hidden">Smart messaging</h3>
+                <p data-lang="es">Lorem ipsum dolor sit amet. consectetur</p>
+                <p data-lang="en" class="hidden">Lorem ipsum dolor sit amet. consectetur</p>
+                <p data-lang="es">adipiscing elit. Aliquet sapien gravida sed</p>
+                <p data-lang="en" class="hidden">adipiscing elit. Aliquet sapien gravida sed</p>
+                <p data-lang="es">de todos modos, Nils es un poco así.</p>
+                <p data-lang="en" class="hidden">anyway, Nils is a bit like that.</p>
+            </div>
+        </div>
+    </section>
+    
+    <div class="centered-container">
+        <div class="video-container">
+            <img src="imagen10.jpg" alt="Video Call" width="100%">
+        </div>
+        <div class="features">
+            <!-- Reuniones por video -->
+            <div class="feature">
+                <img class="feature-icon" src="imagen3.png" alt="Reuniones por video">
+                <span data-lang="es">Reuniones por video</span>
+                <span data-lang="en" class="hidden">Video Meetings</span>
+            </div>
+    
+            <!-- Audio mejorado -->
+            <div class="feature">
+                <img class="feature-icon" src="imagen4.png" alt="Audio mejorado">
+                <span data-lang="es">Audio mejorado</span>
+                <span data-lang="en" class="hidden">Enhanced Audio</span>
+            </div>
+    
+            <!-- Subtítulos en vivo -->
+            <div class="feature live-subtitles">
+                <img class="feature-icon" src="imagen5.png" alt="Subtítulos en vivo">
+                <span data-lang="es">Subtítulos en vivo<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                <span data-lang="en" class="hidden">Live Subtitles<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+            </div>
+    
+            <!-- Grabación de llamadas -->
+            <div class="feature">
+                <img class="feature-icon" src="imagen6.png" alt="Grabación de llamadas">
+                <span data-lang="es">Grabación de llamadas</span>
+                <span data-lang="en" class="hidden">Call Recording</span>
+            </div>
+        </div>
+    </div>
+     <!-- Nuevo contenedor para texto e imagen -->
+     <div class="text-image-container">
+        <div class="text-content">
+            <h2>Impulsando la colaboración y la productividad</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet sapien</p>
+            <p>gravida sed nils. Lacus odio enum, urna, in ut sapien sed vestibulum. Quam</p>
+            <p>dui nunc, nulla mauris mattis eget aliquam. Risus fames consequat sed</p>
+            <p>tortot. Urna donec diam facilisis lacinia senectus</p>
+            <button class="btn3" data-lang="es">30 días de prueba gratis</button>
+        <button class="btn3 hidden" data-lang="en">30 days free trial</button>
+        </div>
+        <div class="image-content">
+            <img src="imagen7.png" alt="Imagen descriptiva">
+        </div>
+    </div>
+ <!-- Sección 1: text-image-container1 -->
+<div class="text-image-container1">
+    <div class="image-content">
+        <img src="imagen12.png" alt="Imagen descriptiva">
+    </div>
+    <div class="text-content">
+        <h2 data-lang="es">Impulsando la colaboración y la productividad</h2>
+        <h2 data-lang="en" class="hidden">Driving Collaboration and Productivity</h2>
+        <p data-lang="es">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet sapien</p>
+        <p data-lang="en" class="hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet sapien</p>
+        <p data-lang="es">gravida sed nils. Lacus odio enum, urna, in ut sapien sed vestibulum. Quam</p>
+        <p data-lang="en" class="hidden">gravida sed nils. Lacus odio enum, urna, in ut sapien sed vestibulum. Quam</p>
+        <p data-lang="es">dui nunc, nulla mauris mattis eget aliquam. Risus fames consequat sed</p>
+        <p data-lang="en" class="hidden">dui nunc, nulla mauris mattis eget aliquam. Risus fames consequat sed</p>
+        <p data-lang="es">tortot. Urna donec diam facilisis lacinia senectus</p>
+        <p data-lang="en" class="hidden">tortot. Urna donec diam facilisis lacinia senectus</p>
+        <button class="btn2" data-lang="es">¡Prueba Startco ahora!</button>
+        <button class="btn2 hidden" data-lang="en">Try Startco Now!</button>
+    </div>
+</div>
+
+<!-- Sección 2: text-image-container2 -->
+<div class="text-image-container2">
+    <div class="text-content">
+        <div class="slide-up-animation">
+            <h2>Impulsando la colaboración y la productividad</h2>
+            <h2 data-lang="en" class="hidden">Driving Collaboration and Productivity</h2>
+        </div>
+        <h2 data-lang="en" class="hidden">Driving Collaboration and Productivity</h2>
+        <p data-lang="es">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet sapien</p>
+        <p data-lang="en" class="hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet sapien</p>
+        <p data-lang="es">gravida sed nils. Lacus odio enum, urna, in ut sapien sed vestibulum. Quam</p>
+        <p data-lang="en" class="hidden">gravida sed nils. Lacus odio enum, urna, in ut sapien sed vestibulum. Quam</p>
+        <p data-lang="es">dui nunc, nulla mauris mattis eget aliquam. Risus fames consequat sed</p>
+        <p data-lang="en" class="hidden">dui nunc, nulla mauris mattis eget aliquam. Risus fames consequat sed</p>
+        <p data-lang="es">tortot. Urna donec diam facilisis lacinia senectus</p>
+        <p data-lang="en" class="hidden">tortot. Urna donec diam facilisis lacinia senectus</p>
+        <img src="imagen27.png" alt="Imagen descriptiva" width="500" height="50">
+    </div>
+    <div class="image-content">
+        <img src="imagen13.png" alt="Imagen descriptiva" width="500" height="50">
+    </div>
+</div>
+<!-- Sección de Latest News -->
+<section class="latest-news">
+    <div class="news-container">
+        <h2 data-lang="es">Últimas noticias</h2>
+        <h2 data-lang="en" class="hidden">Latest News</h2>
+        <p data-lang="es">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet</p>
+        <p data-lang="en" class="hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet</p>
+        <p data-lang="es">Allí estará Asapien Gravida sed Nisl.</p>
+        <p data-lang="en" class="hidden">There will be Asapien Gravida sed Nisl.</p>
+        <div class="news-cards">
+            <div class="news-card">
+                <img src="imagen14.webp" alt="Noticia 1">
+            </div>
+            <div class="news-card blue-background"> <!-- Segundo news-card con fondo azul -->
+                <h3>Google's Page Experience</h3>
+                <h3>Update Launching May</h3>  
+                <h3>there will 2002</h3>
+                <p>Making this the first true generator on</p>
+                <p>the Internet. It uses a dictionary of</p>
+                <p>over  200 Latin Words...</p>
+                <button class="btn4" data-lang="es">Aprende más→</button>
+                <button class="btn4 hidden" data-lang="en">Learn More→</button>
+            </div>
+            <div class="news-card">
+                <img src="imagen22.avif" alt="Noticia 3">
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+<section class="affon-resources">
+    <!-- Columna de Affon -->
+    <div class="affon-column">
+        <div class="affon-logo">
+            <img src="imagen.jpg" alt="Imagen 1" width="30" height="30">
+                <div class="logo">affon</div>
+        </div>
+        <div class="affon-text">
+            <p data-lang="es">Lorem ipsum dolor sit amet, consectetur adipiscing elit. There will a liquet sapien gravida sed nisl.</p>
+            <p data-lang="en" class="hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit. There will a liquet sapien gravida sed nisl.</p>
+        </div>
+        <div class="affon-icons">
+            <img src="imagen23.jpeg" alt="Icono 1" width="30" height="30" class="spin-animation">
+            <img src="imagen24.jpg" alt="Icono 2" width="30" height="30">
+            <img src="imagen25.png" alt="Icono 3" width="30" height="30">
+            <img src="imagen26.avif" alt="Icono 4" width="30" height="30">
+        </div>
+    </div>
+
+    <!-- Columna de Resources -->
+    <div class="resources-column">
+        <h3 data-lang="es">RECURSOS</h3>
+        <h3 data-lang="en" class="hidden">RESOURCES</h3>
+        <ul>
+            <li><a href="#" data-lang="es">Descargar aplicaciones</a><a href="#" data-lang="en" class="hidden">Download Apps</a></li>
+            <li><a href="#" data-lang="es">Centro de ayuda</a><a href="#" data-lang="en" class="hidden">Help Center</a></li>
+            <li><a href="#" data-lang="es">Métodos de productividad</a><a href="#" data-lang="en" class="hidden">Productivity Methods</a></li>
+            <li><a href="#" data-lang="es">Recomendar a un amigo</a><a href="#" data-lang="en" class="hidden">Refer a friend</a></li>
+            <li><a href="#" data-lang="es">Integraciones</a><a href="#" data-lang="en" class="hidden">Integrations</a></li>
+        </ul>
+    </div>
+
+    <!-- Columna de Product -->
+    <div class="resources-column">
+        <h3 data-lang="es">PRODUCTO</h3>
+        <h3 data-lang="en" class="hidden">PRODUCT</h3>
+        <ul>
+            <li><a href="#" data-lang="es">Cómo funciona</a><a href="#" data-lang="en" class="hidden">How it Works</a></li>
+            <li><a href="#" data-lang="es">Iniciar sesión</a><a href="#" data-lang="en" class="hidden">Login</a></li>
+            <li><a href="#" data-lang="es">Obtén Tara gratis</a><a href="#" data-lang="en" class="hidden">Get Tara for Free</a></li>
+            <li><a href="#" data-lang="es">Gestión de tareas</a><a href="#" data-lang="en" class="hidden">Task Management</a></li>
+            <li><a href="#" data-lang="es">Sprints semanales</a><a href="#" data-lang="en" class="hidden">Weekly Sprints</a></li>
+        </ul>
+    </div>
+
+    <!-- Columna de About -->
+    <div class="resources-column">
+        <h3 data-lang="es">ACERCA DE</h3>
+        <h3 data-lang="en" class="hidden">ABOUT</h3>
+        <ul>
+            <li><a href="#" data-lang="es">Sobre nosotros</a><a href="#" data-lang="en" class="hidden">About Us</a></li>
+            <li><a href="#" data-lang="es">¡Estamos contratando!</a><a href="#" data-lang="en" class="hidden">We are hiring!</a></li>
+            <li><a href="#" data-lang="es">Blog</a><a href="#" data-lang="en" class="hidden">Blog</a></li>
+            <li><a href="#" data-lang="es">Prensa</a><a href="#" data-lang="en" class="hidden">Press</a></li>
+            <li><a href="#" data-lang="es">Twist</a><a href="#" data-lang="en" class="hidden">Twist</a></li>
+        </ul>
+    </div>
+</section>
+
+<!-- Pie de página -->
+<footer class="resources-footer">
+    <p data-lang="es">Copyright © 2021 Daffon. Todos los derechos reservados.</p>
+    <p data-lang="en" class="hidden">Copyright © 2021 Daffon. All Rights Reserved.</p>
+</footer>
+    <script>
+        // Seleccionar botones de idioma
+        const esBtn = document.getElementById("es-btn");
+        const enBtn = document.getElementById("en-btn");
+    
+        // Función para cambiar el idioma
+        function changeLanguage(lang) {
+            // Obtener todos los elementos con atributo data-lang
+            const esElements = document.querySelectorAll('[data-lang="es"]');
+            const enElements = document.querySelectorAll('[data-lang="en"]');
+    
+            // Mostrar u ocultar elementos según el idioma seleccionado
+            if (lang === "es") {
+                esElements.forEach(element => element.classList.remove("hidden"));
+                enElements.forEach(element => element.classList.add("hidden"));
+                esBtn.classList.add("active");
+                enBtn.classList.remove("active");
+            } else if (lang === "en") {
+                esElements.forEach(element => element.classList.add("hidden"));
+                enElements.forEach(element => element.classList.remove("hidden"));
+                esBtn.classList.remove("active");
+                enBtn.classList.add("active");
+            }
+        }
+    
+        // Eventos para los botones de idioma
+        esBtn.addEventListener("click", () => changeLanguage("es"));
+        enBtn.addEventListener("click", () => changeLanguage("en"));
+    </script>
+</body>
+</html>
+
+ 
